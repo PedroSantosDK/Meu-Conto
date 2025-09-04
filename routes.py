@@ -1,7 +1,8 @@
 from __init__ import app, db
 from flask import render_template, request, redirect, url_for
 from models import Livros
-from Tools import *
+from Tools import Validate, Safe_Remove
+from os import system as sy
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -33,7 +34,6 @@ def Criar_conto():
 
     if request.method == "GET":
         return render_template("create.html")
-    
 
 @app.route("/delete", methods=["GET", "POST"])
 def Deletar_conto():
@@ -51,10 +51,27 @@ def Deletar_conto():
     if request.method == "GET":
         return render_template("delete.html")
     
-@app.route("/update", methods=["GET", "POST"])
-def Update_conto():
+@app.route("/update/<conto>", methods=["GET", "POST"])
+def Update_conto(conto):
     if request.method == "POST":
-        return "penis"
+        novo_titulo = request.form.get("titulo")
+        novo_conto = request.form.get("conto")
+        novo_conto = Validate(novo_conto)
+
+        if novo_titulo != "" and novo_conto != "":
+            Livros.query.filter_by(historia=conto).update({Livros.titulo:novo_titulo, Livros.historia:novo_conto})
+            db.session.commit()
+            return redirect(url_for("home"))
+        elif novo_titulo != "" and novo_conto == "":
+            Livros.query.filter_by(historia=conto).update({Livros.titulo:novo_titulo})
+            db.session.commit()
+            return redirect(url_for("home"))
+        elif novo_titulo == "" and novo_conto != "":
+            Livros.query.filter_by(historia=conto).update({Livros.historia:novo_conto})
+            db.session.commit()
+            return redirect(url_for("home"))
+        else:
+            return redirect(url_for("home"))
     
     if request.method == "GET":
-        return render_template("update.html")
+        return render_template("update.html", conto=conto)

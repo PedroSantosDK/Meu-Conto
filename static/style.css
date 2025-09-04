@@ -81,7 +81,6 @@ label {
 }
 
 .textarea-form {
-    border-style: none;
     width: 800px;
     min-height: 300px;
     height: fit-content;
@@ -91,7 +90,6 @@ label {
 }
 
 .titulo-form {
-    border-style: none;
     height: 30px;
     width: 500px;
     font-size: 20px;
@@ -161,4 +159,23 @@ label {
 
 li {
     display: inline-block;
+}
+
+.entry-update {
+    height: 60px;
+    width: 500px;
+    font-size: 40px;
+    color: black;
+}
+
+.body-update {
+    position: absolute;
+    left: 21%;
+    bottom: 40%;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    border-style: inset;
+    width: fit-content;
+    height: fit-content;
 }
