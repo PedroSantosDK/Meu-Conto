@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='black.css')}}">
+    <title>Criar Conto</title>
+</head>
+<body>
+    <h1>Contos do Undead</h1>
+    <div class="form-div">
+        <form method="post">
+            <label for="titulo">Titulo</label><br>
+            <input class="titulo-form" type="text" name="titulo" id="" required>
+            <label for="conto">Conto</label><br>
+            <textarea class="textarea-form" name="conto" id="" required></textarea><br>
+            <button class="button-form" type="submit">Criar</button>
+        </form>
+    </div>
+</body>
+</html>

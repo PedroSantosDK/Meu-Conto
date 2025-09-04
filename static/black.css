@@ -1,0 +1,164 @@
+* {
+    outline: none;
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0.1rem;
+    color: white;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: gray;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.navbar a {
+    font-size: 45px;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(189, 189, 189);
+}
+
+.navbar li {
+    float: left;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+text {
+    color: white;
+}
+
+.body-story {
+    position: absolute;
+    left: 11%;
+    align-items: center;
+}
+h1 {
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 65px;
+    text-decoration: underline;
+}
+
+p {
+    color: white;
+    font-size: 45px;
+    font-style: italic;
+}
+
+label {
+    color:white;
+    display: block;
+    font-size: 50px
+}
+
+.story-div {
+    margin: 0.5rem;
+    padding: 0;
+    text-align: center;
+    border-style: double;
+    border-color: white;
+    border-width: 12px;
+    width: 1250px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.textarea-form {
+    border-style: none;
+    width: 800px;
+    min-height: 300px;
+    height: fit-content;
+    resize: none;
+    font-size: 25px;
+    color: black;
+}
+
+.titulo-form {
+    border-style: none;
+    height: 30px;
+    width: 500px;
+    font-size: 20px;
+    color:black;
+}
+
+.form-div {
+    position: absolute;
+    left: 27%;
+    bottom: 20%;
+    border-style: ridge;
+    border-color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.button-form {
+    font-size: 40px;
+    height: 50px;
+    width: 150px;
+    color: black;
+}
+
+.button-delete {
+    background-color: transparent;
+    border: none;
+    white-space: pre;
+    color: white;
+    font-size: 50px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.button-cancel {
+    background-color: transparent;
+    border: none;
+    white-space: pre;
+    color: white;
+    font-size: 50px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.entry-delete {
+    height: 60px;
+    width: 500px;
+    font-size: 40px;
+    color: black;
+}
+
+.body-delete {
+    position: absolute;
+    left: 21%;
+    bottom: 40%;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    border-style: inset;
+    width: fit-content;
+    height: fit-content;
+}
+
+li {
+    display: inline-block;
+}

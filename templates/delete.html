@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='black.css')}}">
+    <title>Delete</title>
+</head>
+<body class="body-delete">
+    
+    <h1>Qual História Deletar?</h1>
+
+    <form class="form-delete" method="post">
+        <input class="entry-delete" type="text" name="contoId" placeholder="Nome do Conto">
+        <ul>
+            <li>
+                <button class="button-delete" type="submit" id="deleteID" name="deleteConto">😔<br>Deletar</button>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5000/"><button class="button-cancel" type="button" id="cancelID">🥺<br>Cancelar</button></a>
+            </li>
+        </ul>
+    </form>
+    <script src="{{ url_for('static', filename='buttons_script.js') }}"></script>
+</body>
+</html>

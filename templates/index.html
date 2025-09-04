@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme" rel= "stylesheet" type="text/css" href="{{ url_for('static',filename='black.css') }}">
+    <title>Contos do Undead</title>
+</head>
+<body class="body-story">        
+
+    <header style="text-align: center;">
+        <h1>Contos do Undead</h1>
+        
+        <nav class="navbar">
+            <ul>
+                <li><a href="http://127.0.0.1:5000/create">create</a></li>
+                <li><a href="http://127.0.0.1:5000/delete">delete</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        
+        <section>
+            {% for titulo, conto in titulo_conto %}
+                <div class="story-div">
+                        <h2>{{ titulo }}</h2>
+                    <p style="white-space: pre-line;">
+                        {{ conto }}
+                    </p>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+
+</body>
+</html>
