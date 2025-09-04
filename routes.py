@@ -52,12 +52,13 @@ def Deletar_conto():
         return render_template("delete.html")
     
 @app.route("/update/<conto>", methods=["GET", "POST"])
-def Update_conto(conto):
+def Atualizar_conto(conto):
     if request.method == "POST":
         novo_titulo = request.form.get("titulo")
         novo_conto = request.form.get("conto")
         novo_conto = Validate(novo_conto)
 
+        # Tenho que dar um jeito nessa familia de if skskksksksksk
         if novo_titulo != "" and novo_conto != "":
             Livros.query.filter_by(historia=conto).update({Livros.titulo:novo_titulo, Livros.historia:novo_conto})
             db.session.commit()
