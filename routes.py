@@ -50,3 +50,11 @@ def Deletar_conto():
 
     if request.method == "GET":
         return render_template("delete.html")
+    
+@app.route("/update", methods=["GET", "POST"])
+def Update_conto():
+    if request.method == "POST":
+        return "penis"
+    
+    if request.method == "GET":
+        return render_template("update.html")
