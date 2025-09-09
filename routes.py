@@ -4,7 +4,7 @@ from models import Livros
 from Tools import Validate, Safe_Remove
 from os import system as sy
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/home", methods=["GET", "POST"])
 def home():
     if request.method == "GET":
         lista1 = []
