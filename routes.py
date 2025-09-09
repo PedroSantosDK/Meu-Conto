@@ -56,6 +56,7 @@ def Atualizar_conto(conto):
     if request.method == "POST":
         novo_titulo = request.form.get("titulo")
         novo_conto = request.form.get("conto")
+        novo_conto = Safe_Remove(novo_conto)
         novo_conto = Validate(novo_conto)
 
         # Tenho que dar um jeito nessa familia de if skskksksksksk
